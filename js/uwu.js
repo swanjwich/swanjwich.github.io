@@ -88,3 +88,33 @@ const love = setInterval(addHeart, 500);
  document.getElementById('heart').addEventListener('click', function() {
   document.getElementById('letterContainer').style.display = 'block';
 });
+
+
+//Get the button
+let mybutton = document.getElementById("btn-back-to-top");
+
+// When the user scrolls down or up, show or hide the button accordingly
+window.onscroll = function () {
+  scrollFunction();
+};
+
+function scrollFunction() {
+  let lastSection = document.querySelector("body").lastElementChild;
+  let lastSectionRect = lastSection.getBoundingClientRect();
+
+  if (
+    (window.innerHeight + window.scrollY) >= (document.body.offsetHeight - lastSectionRect.height)
+  ) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+mybutton.addEventListener("click", backToTop);
+
+function backToTop() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
