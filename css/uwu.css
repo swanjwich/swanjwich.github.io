@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Single+Day&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Protest+Riot&family=Single+Day&display=swap');
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  position: relative;
+  letter-spacing: 0.04em;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+ 
+body {
+    font-family: 'Pacifico', cursive;
+    font-weight: 300;
+    background-color: #2d3133;
+  }
+
+  section{
+    overflow: hidden;
+
+  }
+
+
+.main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    background-image: url(../img/bg.png); 
+    background-size: cover;
+    background-repeat: repeat;
+    background-position: center;
+    background-attachment: fixed;
+    color: white;
+    font-family: 'Pacifico', cursive;
+    height: 100vh;
+}
+
+.main h1{
+    font-size: 70px;
+    font-weight:400;
+}
+
+.heart {
+  width: 100px;
+  height: 100px;
+  background: url("https://cssanimation.rocks/images/posts/steps/heart.png") no-repeat;
+  background-position: 0 0;
+  cursor: pointer;
+  transition: background-position 1s steps(28);
+  transition-duration: 0s;
+  
+  &.is-active {
+    transition-duration: 1s;
+    background-position: -2800px 0;
+  }
+}
+
+.stage {
+    position: absolute; /* Changed to absolute */
+    bottom: 0; /* Align to the bottom of the section */
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+.hearts {
+    position: absolute;
+    top: -50%;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -m-transform: rotate(-45deg);
+    transform: rotate(-45deg)
+ }
+
+.hearts:before {
+    position: absolute;
+    top: -50%;
+    left: 0;
+    display: block;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    border-radius: 100%;
+}
+
+.hearts:after {
+    position: absolute;
+    top: 0;
+    right: -50%;
+    display: block;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    border-radius: 100%;
+}
+
+@-webkit-keyframes love {
+  0%{top:110%}
+}
+@-moz-keyframes love {
+  0%{top:110%}
+}
+@-ms-keyframes love {
+  0%{top:110%}
+}
+@keyframes love {
+  0%{top:110%}
+}
+
+.color-red{
+    color: rgb(221, 70, 70);
+}
+
+.color-blue{
+    color: blue;
+}
+
+.color-white{
+    color: white;
+}
+
+.color-off-white{
+    color: #E1E7EF;
+}
+
+.color-black{
+    color: black;
+}
+
+.border-thick {
+  border: 1px solid black;
+}
+
+.border-radius{
+  border-radius: 5px;
+}
+
+.border-left-radius{
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.border-right-radius{
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.text-single{
+  font-family: 'Single Day', cursive;
+}
+
+.introduction{
+    font-family: 'Pacifico', cursive; 
+    background-color: #101B38;   
+}
+
+.font-singleday{
+  font-family: 'Single Day', cursive;
+}
+
+.feb20{
+  font-family: 'Single Day', cursive;
+  font-size: 25px;
+  color: #E1E7EF;
+
+}
+
+.timeline{
+  height: 100%;
+  font-family: 'Pacifico', cursive; 
+  color: white; 
+  background-color: black;  
+}
+
+.cover {
+  height: 200px;
+  background-image: url('../img/cover.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 3px;
+}
+
+.profile-img {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  margin-top: -75px;
+  border: 5px solid #fff;
+}
+
+.artwork{
+  height: 100vh;
+  width: 100%;
+  background-image: url('../img/art.webp');
+  background-size: cover;
+  background-position: center;
+  font-family: 'Pacifico', cursive; 
+
+}
+
+#heart {
+  cursor: pointer;
+  color: red;
+  font-size: 40px;
+}
+
+#letterContainer {
+  display: none;
+}
+
+.letter{
+  height: 500px; /* Set a fixed height */
+  overflow: auto; /* Add scrollbar when content exceeds height */
+}
+
+/* Custom scrollbar */
+.letter::-webkit-scrollbar {
+  width: 1px;
+}
+
+/* Track */
+.letter::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+.letter::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+.letter::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

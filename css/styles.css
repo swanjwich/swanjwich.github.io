@@ -1,0 +1,80 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: #111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+
+  }
+
+  /* WELCOME SECTION */
+.welcome{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+}
+
+  .waviy {
+    position: relative;
+  }
+
+  .waviy span {
+    position: relative;
+    display: inline-block;
+    font-size: 40px;
+    color: #111;
+    text-transform: uppercase;
+    animation: flip 2s infinite;
+    animation-delay: calc(.2s * var(--i))
+  }
+  @keyframes flip {
+    0%,80% {
+      transform: rotateY(360deg) 
+    }
+  }
+  
+  .cute-password-input {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  label {
+    font-size: 16px;
+    color: #495057;
+  }
+  
+  .input-group {
+    margin-top: 10px;
+  }
+  
+  #password-addon {
+    background-color: #fff;
+    cursor: pointer;
+  }
+  
+  #password-addon:hover {
+    background-color: #e9ecef;
+  }
+  
+  #password-toggle {
+    font-size: 20px;
+    color: #495057;
+  }
+  
+  /* Style for the eye icon when password is revealed */
+  .password-revealed #password-toggle {
+    color: #007bff;
+  }
+  
