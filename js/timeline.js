@@ -121,6 +121,18 @@ const feb2024Images = [
     'img/feb2024-4.jpg',
     'img/feb2024-5.jpg',
     'img/feb2024-6.jpg',
+    'img/february2024/1.jpg',
+    'img/february2024/3.jpg',
+    'img/february2024/2.jpg',
+    'img/february2024/4.jpg',
+    'img/february2024/5.jpg',
+    'img/february2024/6.jpg',
+    'img/february2024/7.jpg',
+    'img/february2024/8.jpg',
+    'img/february2024/9.jpg',
+    'img/february2024/10.jpg',
+    'img/february2024/11.jpg',
+    'img/february2024/13.jpg'
   ];
 
   generateMonthImages('February', 2023, february2023Images);
