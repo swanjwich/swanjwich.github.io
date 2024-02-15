@@ -118,3 +118,12 @@ function backToTop() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 }
+
+document.getElementById("openIframe").addEventListener("click", function(event) {
+  event.preventDefault(); // Prevent the default link behavior
+  document.getElementById("flowers").style.display = "block"; // Show the iframe
+  document.getElementById("myIframe").style.display = "block"; // Show the iframe
+  document.getElementById("flowers").scrollIntoView({ behavior: "smooth" });
+  document.getElementById("myIframe").src = "valentine.html"; // Set the iframe src
+});
+
